@@ -13,7 +13,7 @@
         card_view:cardBackgroundColor="@color/red_200">
 
         <TextView
-            android:id="@+id/style_card_front"
+            android:id="@+id/style_card_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

@@ -8,41 +8,37 @@
     tools:context=".MainActivity">
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/easyFlipView1"
+        android:id="@+id/styles_easy_flip_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:flipDuration="500"
         app:flipOnTouch="false"
         app:flipType="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/flip_button"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
         app:layout_constraintTop_toTopOf="parent" >
 
-
-        <include layout="@layout/style_card_front"/>
         <include layout="@layout/style_card_back"/>
-
+        <include layout="@layout/style_card_front"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/easyFlipView2"
+        android:id="@+id/poses_easy_flip_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:flipDuration="500"
         app:flipOnTouch="false"
         app:flipType="horizontal"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/flip_button"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <include layout="@layout/pose_card_front"/>
         <include layout="@layout/pose_card_back"/>
-
+        <include layout="@layout/pose_card_front"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <Button
-        android:id="@+id/flip_button"
+        android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

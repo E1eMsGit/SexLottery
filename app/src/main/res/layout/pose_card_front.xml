@@ -24,7 +24,7 @@
                 android:layout_margin="6dp"/>
 
             <TextView
-                android:id="@+id/poses_card_front"
+                android:id="@+id/poses_card_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
