@@ -1,10 +1,7 @@
 package com.example.sexposescards;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +11,7 @@ import com.example.sexposescards.model.Pose;
 import com.example.sexposescards.model.PosesList;
 import com.example.sexposescards.model.Style;
 import com.example.sexposescards.model.StylesList;
+import com.wajahatkarim3.easyflipview.EasyFlipView;
 
 import java.util.List;
 import java.util.Random;
@@ -21,15 +19,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private TextView styleCardFront;
-    private TextView styleCardBack;
     private TextView posesCardFront;
-    private TextView posesCardBack;
     private Button flipButton;
-
-    private AnimatorSet styleFrontAnim;
-    private AnimatorSet styleBackAnim;
-    private AnimatorSet posesFrontAnim;
-    private AnimatorSet posesBackAnim;
 
     private List<Style> stylesList;
     private List<Pose> posesList;
@@ -38,31 +29,34 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isFront;
 
+    private EasyFlipView easyFlipView1;
+    private EasyFlipView easyFlipView2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         init();
 
-        flipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isFront)
-                {
-                    startFrontToBackAnim(styleFrontAnim, styleBackAnim, styleCardFront, styleCardBack);
-                    startFrontToBackAnim(posesFrontAnim, posesBackAnim, posesCardFront, posesCardBack);
-                    isFront = false;
-                }
-                else
-                {
-                    startBackToFrontAnim(styleFrontAnim, styleBackAnim, styleCardFront, styleCardBack);
-                    startBackToFrontAnim(posesFrontAnim, posesBackAnim, posesCardFront, posesCardBack);
-
-                    styleCardFront.setText(stylesList.get(styleNumber.nextInt(stylesList.size())).getText());
-                    posesCardFront.setText(posesList.get(poseNumber.nextInt(posesList.size())).getText());
-                    isFront = true;
-                }
+        flipButton.setOnClickListener(view -> {
+            flipButton.setEnabled(false);
+            if (isFront)
+            {
+                easyFlipView1.flipTheView();
+                easyFlipView2.flipTheView();
+                isFront = false;
             }
+            else
+            {
+                easyFlipView1.flipTheView();
+                easyFlipView2.flipTheView();
+
+                styleCardFront.setText(stylesList.get(styleNumber.nextInt(stylesList.size())).getDescription());
+                posesCardFront.setText(posesList.get(poseNumber.nextInt(posesList.size())).getText());
+                isFront = true;
+            }
+
+
         });
     }
 
@@ -71,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         styleCardFront = findViewById(R.id.style_card_front);
-        styleCardBack = findViewById(R.id.style_card_back);
         posesCardFront = findViewById(R.id.poses_card_front);
-        posesCardBack = findViewById(R.id.poses_card_back);
         flipButton = findViewById(R.id.flip_button);
         isFront = false;
         stylesList = StylesList.getInstance(this).getStyles();
@@ -81,57 +73,16 @@ public class MainActivity extends AppCompatActivity {
         styleNumber = new Random();
         poseNumber = new Random();
 
-        float scale = this.getResources().getDisplayMetrics().density;
-        styleCardFront.setCameraDistance(8000 * scale);
-        styleCardBack.setCameraDistance(8000 * scale);
-        posesCardFront.setCameraDistance(8000 * scale);
-        posesCardBack.setCameraDistance(8000 * scale);
+        easyFlipView1 = findViewById(R.id.easyFlipView1);
+        easyFlipView2 = findViewById(R.id.easyFlipView2);
 
-        styleFrontAnim = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.front_animator);
-        styleBackAnim = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.back_animator);
-        posesFrontAnim = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.front_animator);
-        posesBackAnim = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.back_animator);
-
-        Animator.AnimatorListener animatorListener = new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-                flipButton.setEnabled(false);
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                flipButton.setEnabled(true);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animator) {
-
-            }
+        EasyFlipView.OnFlipAnimationListener onFlipAnimationListener = (easyFlipView, newCurrentSide) ->
+        {
+            flipButton.setEnabled(true);
         };
-        styleFrontAnim.addListener(animatorListener);
-        styleBackAnim.addListener(animatorListener);
-        posesFrontAnim.addListener(animatorListener);
-        posesBackAnim.addListener(animatorListener);
-    }
 
-    private void startFrontToBackAnim(AnimatorSet frontAnimator, AnimatorSet backAnimator, TextView frontCardSide, TextView backCardSide)
-    {
-        frontAnimator.setTarget(frontCardSide);
-        backAnimator.setTarget(backCardSide);
-        frontAnimator.start();
-        backAnimator.start();
-    }
+        easyFlipView1.setOnFlipListener(onFlipAnimationListener);
+        easyFlipView2.setOnFlipListener(onFlipAnimationListener);
 
-    private void startBackToFrontAnim(AnimatorSet frontAnimator, AnimatorSet backAnimator, TextView frontCardSide, TextView backCardSide)
-    {
-        frontAnimator.setTarget(backCardSide);
-        backAnimator.setTarget(frontCardSide);
-        frontAnimator.start();
-        backAnimator.start();
     }
 }

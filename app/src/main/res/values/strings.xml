@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Sex Poses Cards</string>
-    <string name="spin_button_text">Flip</string>
+    <string name="spin_button_text">Start</string>
+
+    <!--    Styles-->
+    <string name="style_1">Affectionately</string>
+    <string name="style_2">Rough</string>
+    <string name="style_3">Playfully</string>
+    <string name="style_4">Passionately</string>
+    <string name="style_5">Fast</string>
+    <string name="style_6">Slowly</string>
 </resources>

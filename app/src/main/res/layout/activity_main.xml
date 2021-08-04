@@ -7,60 +7,39 @@
     android:layout_margin="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/style_card_front"
-        android:layout_width="190dp"
-        android:layout_height="300dp"
-        android:background="@color/red_200"
-        android:gravity="center"
-        android:text="Style front side"
-        android:textAlignment="center"
-        android:alpha="0"
-        android:textSize="22dp"
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flipDuration="500"
+        app:flipOnTouch="false"
+        app:flipType="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/flip_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <TextView
-        android:id="@+id/style_card_back"
-        android:layout_width="190dp"
-        android:layout_height="300dp"
-        android:layout_alignParentStart="true"
-        android:background="@color/red_500"
-        android:gravity="center"
-        android:text="Style back side"
-        android:textAlignment="center"
-        android:textSize="22dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/flip_button"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/poses_card_front"
-        android:layout_width="190dp"
-        android:layout_height="300dp"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="Poses front side"
-        android:textAlignment="center"
-        android:alpha="0"
-        android:textSize="22dp"
+        <include layout="@layout/style_card_front"/>
+        <include layout="@layout/style_card_back"/>
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flipDuration="500"
+        app:flipOnTouch="false"
+        app:flipType="horizontal"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/flip_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/poses_card_back"
-        android:layout_width="190dp"
-        android:layout_height="300dp"
-        android:background="@color/purple_500"
-        android:gravity="center"
-        android:text="Poses back side"
-        android:textAlignment="center"
-        android:textSize="22dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/flip_button"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/pose_card_front"/>
+        <include layout="@layout/pose_card_back"/>
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <Button
         android:id="@+id/flip_button"

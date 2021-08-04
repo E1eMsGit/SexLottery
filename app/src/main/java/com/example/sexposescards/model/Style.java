@@ -3,15 +3,15 @@ package com.example.sexposescards.model;
 import android.content.Context;
 
 public class Style {
-    private String text;
+    private int description;
 
-    public Style(Context context, String text)
+    public Style(int description)
     {
-        this.text = text;
+        this.description = description;
     }
 
-    public String getText()
+    public int getDescription()
     {
-        return text;
+        return description;
     }
 }
