@@ -35,5 +35,9 @@ public class PosesList {
         poses.add(new Pose(context, "71"));
         poses.add(new Pose(context, "45"));
         poses.add(new Pose(context, "8"));
+        poses.add(new Pose(context, "82"));
+        poses.add(new Pose(context, "18"));
+        poses.add(new Pose(context, "43"));
+        poses.add(new Pose(context, "2"));
     }
 }

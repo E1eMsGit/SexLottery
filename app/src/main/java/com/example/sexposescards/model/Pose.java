@@ -3,15 +3,15 @@ package com.example.sexposescards.model;
 import android.content.Context;
 
 public class Pose {
-    private String description;
+    private String title;
 
-    public Pose(Context context, String description)
+    public Pose(Context context, String title)
     {
-        this.description = description;
+        this.title = title;
     }
 
-    public String getDescription()
+    public String getTitle()
     {
-        return description;
+        return title;
     }
 }

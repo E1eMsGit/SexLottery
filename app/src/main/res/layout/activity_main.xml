@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/styles_easy_flip_view"
+        android:id="@+id/style_easy_flip_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:flipDuration="500"
         app:flipOnTouch="false"
         app:flipType="horizontal"
+        app:autoFlipBack="true"
+        app:autoFlipBackTime="100"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/start_button"
         app:layout_constraintTop_toTopOf="parent" >
@@ -23,12 +25,14 @@
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/poses_easy_flip_view"
+        android:id="@+id/pose_easy_flip_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:flipDuration="500"
         app:flipOnTouch="false"
         app:flipType="horizontal"
+        app:autoFlipBack="true"
+        app:autoFlipBackTime="100"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/start_button"
         app:layout_constraintTop_toTopOf="parent">

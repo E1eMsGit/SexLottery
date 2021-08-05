@@ -2,6 +2,7 @@ package com.example.sexposescards;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,19 +18,19 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView styleCardText;
-    private TextView posesCardText;
+    private EasyFlipView styleEasyFlipView;
+    private ImageView styleImageView;
+    private TextView styleTextView;
+
+    private EasyFlipView poseEasyFlipView;
+    private ImageView poseImageView;
+    private TextView poseTextView;
+
     private Button startButton;
 
     private List<Style> stylesList;
     private List<Pose> posesList;
-    private Random styleNumber;
-    private Random poseNumber;
-
-    private boolean isAnimationEnd;
-
-    private EasyFlipView stylesEasyFlipView;
-    private EasyFlipView posesEasyFlipView;
+    private Random rnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,55 +40,43 @@ public class MainActivity extends AppCompatActivity {
 
         startButton.setOnClickListener(view -> {
             startButton.setEnabled(false);
-
-            stylesEasyFlipView.flipTheView();
-            posesEasyFlipView.flipTheView();
+            styleEasyFlipView.flipTheView();
+            poseEasyFlipView.flipTheView();
         });
     }
 
-    private void init()
-    {
+    private void init() {
         setContentView(R.layout.activity_main);
 
-        styleCardText = findViewById(R.id.style_card_text);
-        posesCardText = findViewById(R.id.poses_card_text);
+        styleEasyFlipView = findViewById(R.id.style_easy_flip_view);
+        styleImageView = findViewById(R.id.style_image_view);
+        styleTextView = findViewById(R.id.style_text_view);
+
+        poseEasyFlipView = findViewById(R.id.pose_easy_flip_view);
+        poseImageView = findViewById(R.id.pose_image_view);
+        poseTextView = findViewById(R.id.pose_text_view);
+
         startButton = findViewById(R.id.start_button);
-        stylesEasyFlipView = findViewById(R.id.styles_easy_flip_view);
-        posesEasyFlipView = findViewById(R.id.poses_easy_flip_view);
 
         stylesList = StylesList.getInstance(this).getStyles();
         posesList = PosesList.getInstance(this).getPoses();
-        styleNumber = new Random();
-        poseNumber = new Random();
+        rnd = new Random();
 
-        EasyFlipView.OnFlipAnimationListener onStylesFlipAnimationListener = (easyFlipView, newCurrentSide) ->
-        {
-            if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE)
-            {
-                easyFlipView.setAutoFlipBack(true);
-                easyFlipView.setAutoFlipBackTime(50);
-                styleCardText.setText(stylesList.get(styleNumber.nextInt(stylesList.size())).getDescription());
-
+        styleEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
+            if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE) {
+                Style style = stylesList.get(rnd.nextInt(stylesList.size()));
+                styleTextView.setText(style.getDescription());
             } else {
                 startButton.setEnabled(true);
             }
-
-        };
-
-        EasyFlipView.OnFlipAnimationListener onPosesFlipAnimationListener = (easyFlipView, newCurrentSide) ->
-        {
-            if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE)
-            {
-                easyFlipView.setAutoFlipBack(true);
-                easyFlipView.setAutoFlipBackTime(60);
-                posesCardText.setText(posesList.get(poseNumber.nextInt(posesList.size())).getDescription());
-
+        });
+        poseEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
+            if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE) {
+                Pose pose = posesList.get(rnd.nextInt(posesList.size()));
+                poseTextView.setText(pose.getTitle());
             } else {
                 startButton.setEnabled(true);
             }
-        };
-
-        stylesEasyFlipView.setOnFlipListener(onStylesFlipAnimationListener);
-        posesEasyFlipView.setOnFlipListener(onPosesFlipAnimationListener);
+        });
     }
 }
