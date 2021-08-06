@@ -23,7 +23,8 @@
                 android:id="@+id/style_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/card_front_image_size_height"
-                android:background="@color/red_200"/>
+                android:background="@color/red_200"
+                card_view:tint="@color/black"/>
 
             <TextView
                 android:id="@+id/style_text_view"

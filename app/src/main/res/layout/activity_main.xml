@@ -14,7 +14,8 @@
         android:layout_above="@id/pose_easy_flip_view"
         android:layout_centerInParent="true"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/logo_pic" />
+        android:src="@drawable/logo_pic"
+        app:tint="@color/black"/>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/style_easy_flip_view"
