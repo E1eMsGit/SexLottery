@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sex Poses Cards</string>
-    <string name="spin_button_text">Старт</string>
+    <string name="start_button_text">Старт</string>
+    <string name="style_start_message_text_view">Стиль</string>
+    <string name="pose_start_message_text_view">Поза</string>
 
 <!--    Styles-->
     <string name="style_1">Ласково</string>

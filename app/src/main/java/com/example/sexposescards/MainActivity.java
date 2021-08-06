@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         styleEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
             if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE) {
                 Style style = stylesList.get(rnd.nextInt(stylesList.size()));
+                styleImageView.setImageResource(style.getImageId());
                 styleTextView.setText(style.getDescription());
             } else {
                 startButton.setEnabled(true);
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         poseEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
             if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE) {
                 Pose pose = posesList.get(rnd.nextInt(posesList.size()));
+                poseImageView.setImageResource(pose.getImageId());
                 poseTextView.setText(pose.getTitle());
             } else {
                 startButton.setEnabled(true);
