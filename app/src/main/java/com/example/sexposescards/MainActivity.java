@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_game);
 
         styleEasyFlipView = findViewById(R.id.style_easy_flip_view);
         styleImageView = findViewById(R.id.style_image_view);
