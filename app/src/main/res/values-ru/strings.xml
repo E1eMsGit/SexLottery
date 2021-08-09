@@ -5,6 +5,9 @@
     <string name="style_start_message_text_view">Стиль</string>
     <string name="pose_start_message_text_view">Поза</string>
 
+    <string name="prelude_button_text">Прелюдия</string>
+    <string name="game_button_text">Игра</string>
+
 <!--    Styles-->
     <string name="style_1">Ласково</string>
     <string name="style_2">Грубо</string>
