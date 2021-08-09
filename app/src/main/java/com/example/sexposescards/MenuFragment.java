@@ -39,11 +39,6 @@ public class MenuFragment extends Fragment {
         return root;
     }
 
-    @NonNull
-    public static MenuFragment newInstance() {
-        return new MenuFragment();
-    }
-
     private void initViews(View root) {
         preludeButton = root.findViewById(R.id.prelude_button);
         gameButton = root.findViewById(R.id.game_button);
