@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.sexposescards.model.Pose;
-import com.example.sexposescards.model.PosesList;
+import com.example.sexposescards.model.PreludeAction;
+import com.example.sexposescards.model.PreludeActionsList;
 import com.example.sexposescards.model.Style;
 import com.example.sexposescards.model.StylesList;
 import com.wajahatkarim3.easyflipview.EasyFlipView;
@@ -20,27 +20,27 @@ import com.wajahatkarim3.easyflipview.EasyFlipView;
 import java.util.List;
 import java.util.Random;
 
-public class GameFragment extends Fragment {
+public class PreludeFragment extends Fragment {
 
     private EasyFlipView styleEasyFlipView;
     private ImageView styleImageView;
     private TextView styleTextView;
 
-    private EasyFlipView poseEasyFlipView;
-    private ImageView poseImageView;
-    private TextView poseTextView;
+    private EasyFlipView preludeActionEasyFlipView;
+    private ImageView preludeActionImageView;
+    private TextView preludeActionTextView;
 
     private Button startButton;
 
     private List<Style> stylesList;
-    private List<Pose> posesList;
+    private List<PreludeAction> preludeActionsList;
     private Random rnd;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_game, container, false);
+        View root = inflater.inflate(R.layout.fragment_prelude, container, false);
         stylesList = StylesList.getInstance(getContext()).getStyles();
-        posesList = PosesList.getInstance(getContext()).getPoses();
+        preludeActionsList = PreludeActionsList.getInstance(getContext()).getPreludeActions();
         rnd = new Random();
 
         initViews(root);
@@ -51,17 +51,17 @@ public class GameFragment extends Fragment {
 
     // Связь фрагмента с менеджером фрагментов в активности.
     @NonNull
-    public static GameFragment newInstance() {
-        return new GameFragment();
+    public static PreludeFragment newInstance() {
+        return new PreludeFragment();
     }
 
     private void initViews(View root) {
         styleEasyFlipView = root.findViewById(R.id.style_easy_flip_view);
         styleImageView = root.findViewById(R.id.style_image_view);
         styleTextView = root.findViewById(R.id.style_text_view);
-        poseEasyFlipView = root.findViewById(R.id.pose_easy_flip_view);
-        poseImageView = root.findViewById(R.id.pose_image_view);
-        poseTextView = root.findViewById(R.id.pose_text_view);
+        preludeActionEasyFlipView = root.findViewById(R.id.prelude_action_easy_flip_view);
+        preludeActionImageView = root.findViewById(R.id.prelude_action_image_view);
+        preludeActionTextView = root.findViewById(R.id.prelude_action_text_view);
         startButton = root.findViewById(R.id.start_button);
     }
 
@@ -76,11 +76,11 @@ public class GameFragment extends Fragment {
             }
         });
 
-        poseEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
+        preludeActionEasyFlipView.setOnFlipListener((easyFlipView, newCurrentSide) -> {
             if (newCurrentSide == EasyFlipView.FlipState.BACK_SIDE) {
-                Pose pose = posesList.get(rnd.nextInt(posesList.size()));
-                poseImageView.setImageResource(pose.getImageId());
-                poseTextView.setText(pose.getTitle());
+                PreludeAction preludeAction = preludeActionsList.get(rnd.nextInt(preludeActionsList.size()));
+                preludeActionImageView.setImageResource(preludeAction.getImageId());
+                preludeActionTextView.setText(preludeAction.getDescriptionId());
             } else {
                 startButton.setEnabled(true);
             }
@@ -89,7 +89,7 @@ public class GameFragment extends Fragment {
         startButton.setOnClickListener(view -> {
             startButton.setEnabled(false);
             styleEasyFlipView.flipTheView();
-            poseEasyFlipView.flipTheView();
+            preludeActionEasyFlipView.flipTheView();
         });
     }
 }

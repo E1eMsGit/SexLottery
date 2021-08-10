@@ -15,26 +15,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="6dp"
             android:orientation="vertical"
+            android:layout_margin="6dp"
             android:background="@color/white">
 
             <ImageView
-                android:id="@+id/style_image_view"
+                android:id="@+id/prelude_action_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/card_front_image_size_height"
-                android:background="@color/red_200"
-                card_view:tint="@color/black"/>
+                android:background="@color/green_200"/>
 
             <TextView
-                android:id="@+id/style_text_view"
+                android:id="@+id/prelude_action_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textSize="@dimen/card_font_size"
                 android:textColor="@color/black"
-                android:text="@string/style_start_message_text_view"/>
+                android:textSize="@dimen/card_font_size"
+                android:text="@string/prelude_action_start_message_text_view"/>
 
         </LinearLayout>
 

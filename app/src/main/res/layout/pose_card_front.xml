@@ -32,7 +32,7 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="@dimen/card_font_size"
                 android:text="@string/pose_start_message_text_view"/>
 
         </LinearLayout>

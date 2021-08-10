@@ -28,7 +28,7 @@
         app:flipType="horizontal"
         app:autoFlipBack="true"
         app:autoFlipBackTime="100"
-        app:layout_constraintRight_toLeftOf="@id/pose_easy_flip_view"
+        app:layout_constraintRight_toLeftOf="@id/prelude_action_easy_flip_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +39,7 @@
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/pose_easy_flip_view"
+        android:id="@+id/prelude_action_easy_flip_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:flipDuration="500"
@@ -53,8 +53,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="5dp">
 
-        <include layout="@layout/pose_card_back"/>
-        <include layout="@layout/pose_card_front"/>
+        <include layout="@layout/prelude_action_card_back"/>
+        <include layout="@layout/prelude_action_card_front"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <Button
@@ -68,6 +68,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/style_easy_flip_view"
-        android:textSize="@dimen/start_button_font_size"/>
+        android:textSize="@dimen/start_button_font_size" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

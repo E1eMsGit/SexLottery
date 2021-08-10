@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements OnPreludeButtonCl
 
     @Override
     public void onPreludeButtonClicked() {
-
+        PreludeFragment preludeFragment = PreludeFragment.newInstance();
+        fragmentManager.beginTransaction().replace(R.id.container, preludeFragment).addToBackStack(null).commit();
     }
 
     @Override
