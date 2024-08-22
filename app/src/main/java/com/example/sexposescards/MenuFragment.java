@@ -1,31 +1,37 @@
 package com.example.sexposescards;
 
 import android.content.Context;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.sexposescards.interfaces.OnGameButtonClickListener;
-import com.example.sexposescards.interfaces.OnPreludeButtonClickListener;
+import com.example.sexposescards.interfaces.OnMaleFemaleButtonClickListener;
+import com.example.sexposescards.interfaces.OnFemaleFemaleFButtonClickListener;
+import com.example.sexposescards.interfaces.OnMaleMaleButtonClickListener;
 
 public class MenuFragment extends Fragment {
 
-    private Button preludeButton;
-    private Button gameButton;
+    private ImageButton fFButton;
+    private ImageButton mFButton;
+    private ImageButton mMButton;
 
-    private OnPreludeButtonClickListener callbackActivityFromPreludeButtonClicked;
-    private OnGameButtonClickListener callbackActivityFromGameButtonClicked;
+    private OnFemaleFemaleFButtonClickListener callbackActivityFromFFButtonClicked;
+    private OnMaleFemaleButtonClickListener callbackActivityFromMFButtonClicked;
+    private OnMaleMaleButtonClickListener callbackActivityFromMMButtonClicked;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        callbackActivityFromPreludeButtonClicked = (OnPreludeButtonClickListener) context;
-        callbackActivityFromGameButtonClicked = (OnGameButtonClickListener) context;
+        callbackActivityFromFFButtonClicked = (OnFemaleFemaleFButtonClickListener) context;
+        callbackActivityFromMFButtonClicked = (OnMaleFemaleButtonClickListener) context;
+        callbackActivityFromMMButtonClicked = (OnMaleMaleButtonClickListener) context;
     }
 
     @Override
@@ -33,14 +39,16 @@ public class MenuFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_menu, container, false);
 
         initViews(root);
-        preludeButton.setOnClickListener(view -> callbackActivityFromPreludeButtonClicked.onPreludeButtonClicked());
-        gameButton.setOnClickListener(view -> callbackActivityFromGameButtonClicked.onGameButtonClicked());
+        fFButton.setOnClickListener(view -> callbackActivityFromFFButtonClicked.onFemaleFemaleButtonClicked());
+        mFButton.setOnClickListener(view -> callbackActivityFromMFButtonClicked.onMaleFemaleButtonClicked());
+        mMButton.setOnClickListener(view -> callbackActivityFromMMButtonClicked.onMaleMaleButtonClicked());
 
         return root;
     }
 
     private void initViews(View root) {
-        preludeButton = root.findViewById(R.id.prelude_button);
-        gameButton = root.findViewById(R.id.game_button);
+        fFButton = root.findViewById(R.id.ff_button);
+        mFButton = root.findViewById(R.id.mf_button);
+        mMButton = root.findViewById(R.id.mm_button);
     }
 }

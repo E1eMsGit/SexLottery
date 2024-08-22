@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".CardFragment">
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/pose_easy_flip_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:autoFlipBack="true"
+        app:autoFlipBackTime="100"
+        app:flipDuration="500"
+        app:flipOnTouch="true"
+        app:flipType="horizontal"
+        app:flipFrom="right"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/pose_card_back" />
+        <include layout="@layout/pose_card_front" />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

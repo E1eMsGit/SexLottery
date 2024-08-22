@@ -6,10 +6,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.sexposescards.interfaces.OnGameButtonClickListener;
-import com.example.sexposescards.interfaces.OnPreludeButtonClickListener;
+import com.example.sexposescards.interfaces.OnMaleFemaleButtonClickListener;
+import com.example.sexposescards.interfaces.OnFemaleFemaleFButtonClickListener;
+import com.example.sexposescards.interfaces.OnMaleMaleButtonClickListener;
 
-public class MainActivity extends AppCompatActivity implements OnPreludeButtonClickListener, OnGameButtonClickListener {
+public class MainActivity extends AppCompatActivity implements OnFemaleFemaleFButtonClickListener, OnMaleFemaleButtonClickListener, OnMaleMaleButtonClickListener {
 
     private FragmentManager fragmentManager;
 
@@ -26,14 +27,20 @@ public class MainActivity extends AppCompatActivity implements OnPreludeButtonCl
     }
 
     @Override
-    public void onPreludeButtonClicked() {
-        PreludeFragment preludeFragment = PreludeFragment.newInstance();
-        fragmentManager.beginTransaction().replace(R.id.container, preludeFragment).addToBackStack(null).commit();
+    public void onMaleFemaleButtonClicked() {
+        CardFragment cardFragment = CardFragment.newInstance(1);
+        fragmentManager.beginTransaction().replace(R.id.container, cardFragment).addToBackStack(null).commit();
     }
 
     @Override
-    public void onGameButtonClicked() {
-        GameFragment gameFragment = GameFragment.newInstance();
-        fragmentManager.beginTransaction().replace(R.id.container, gameFragment).addToBackStack(null).commit();
+    public void onFemaleFemaleButtonClicked() {
+        CardFragment cardFragment = CardFragment.newInstance(2);
+        fragmentManager.beginTransaction().replace(R.id.container, cardFragment).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void onMaleMaleButtonClicked() {
+        CardFragment cardFragment = CardFragment.newInstance(3);
+        fragmentManager.beginTransaction().replace(R.id.container, cardFragment).addToBackStack(null).commit();
     }
 }

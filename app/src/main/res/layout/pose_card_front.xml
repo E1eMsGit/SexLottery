@@ -2,36 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/card_size_width"
-    android:layout_height="@dimen/card_size_height">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        card_view:cardCornerRadius="7dp"
-        card_view:cardElevation="1dp"
-        card_view:cardBackgroundColor="@color/shadow_gray">
+        android:layout_height="@dimen/card_size_height"
+        card_view:cardElevation="5dp"
+        card_view:cardBackgroundColor="@color/black">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_margin="6dp"
+            android:layout_margin="@dimen/card_margin"
             android:background="@color/white">
 
             <ImageView
                 android:id="@+id/pose_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/card_front_image_size_height"
-                android:background="@color/purple_200"/>
+                android:background="@color/purple_200" />
 
             <TextView
                 android:id="@+id/pose_text_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/card_front_text_size_height"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textSize="@dimen/card_font_size"
                 android:text="@string/pose_start_message_text_view"/>
 

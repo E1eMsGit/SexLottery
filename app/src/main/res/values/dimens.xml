@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="card_size_height">250dp</dimen>
+    <dimen name="card_size_height">600dp</dimen>
     <dimen name="card_size_width">165dp</dimen>
-    <dimen name="card_front_image_size_height">180dp</dimen>
-    <dimen name="card_font_size">16sp</dimen>
-    <dimen name="start_button_font_size">16sp</dimen>
+    <dimen name="card_front_image_size_height">425dp</dimen>
+    <dimen name="card_front_text_size_height">175dp</dimen>
+    <dimen name="card_margin">2dp</dimen>
+    <dimen name="card_font_size">25sp</dimen>
+
+    <!--Menu-->
+    <dimen name="menu_image_button_src_padding">10dp</dimen>
+    <dimen name="menu_image_button_layout_weight">1</dimen>
 </resources>

@@ -31,11 +31,11 @@ public class StylesList {
 
     private void initStylesList() {
         styles = new ArrayList<>();
-        styles.add(new Style(R.string.style_1, R.drawable.affectionately_pic));
-        styles.add(new Style(R.string.style_2, R.drawable.rough_pic));
-        styles.add(new Style(R.string.style_3,R.drawable.playfully_pic));
-        styles.add(new Style(R.string.style_4, R.drawable.passionately_pic));
-        styles.add(new Style(R.string.style_5, R.drawable.fast_pic));
-        styles.add(new Style(R.string.style_6, R.drawable.slowly_pic));
+        styles.add(new Style(R.string.style_1));
+        styles.add(new Style(R.string.style_2));
+        styles.add(new Style(R.string.style_3));
+        styles.add(new Style(R.string.style_4));
+        styles.add(new Style(R.string.style_5));
+        styles.add(new Style(R.string.style_6));
     }
 }

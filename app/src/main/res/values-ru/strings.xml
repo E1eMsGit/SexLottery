@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sex Poses Cards</string>
-
-    <string name="style_start_message_text_view">Стиль</string>
-    <string name="pose_start_message_text_view">Поза</string>
-    <string name="prelude_action_start_message_text_view">Действие</string>
-
-    <string name="prelude_button_text">Прелюдия</string>
-    <string name="game_button_text">Игра</string>
-    <string name="start_button_text">Старт</string>
+    <string name="pose_start_message_text_view">Нажми меня!</string>
 
 <!--    Styles-->
     <string name="style_1">Ласково</string>
@@ -17,37 +10,4 @@
     <string name="style_4">Страстно</string>
     <string name="style_5">Быстро</string>
     <string name="style_6">Медленно</string>
-
-<!--    Prelude Actions-->
-    <string name="prelude_action_1">Поцеловать шею</string>
-    <string name="prelude_action_2">Поцеловать глаз</string>
-    <string name="prelude_action_3">Поцеловать ладонь</string>
-    <string name="prelude_action_4">Поцеловать грудь</string>
-    <string name="prelude_action_5">Поцеловать спину</string>
-    <string name="prelude_action_6">Поцелуй вверх ногами</string>
-    <string name="prelude_action_7">Поцеловать подбородок</string>
-    <string name="prelude_action_8">Поцеловать нос</string>
-    <string name="prelude_action_9">Укусить ухо</string>
-    <string name="prelude_action_10">Укусить губу</string>
-    <string name="prelude_action_11">Укусить язык</string>
-    <string name="prelude_action_12">Укусить шею</string>
-    <string name="prelude_action_13">Укусить колено</string>
-    <string name="prelude_action_14">Укусить подбородок</string>
-    <string name="prelude_action_15">Сесть на колени партнеру</string>
-    <string name="prelude_action_16">Шлепнуть по попе</string>
-    <string name="prelude_action_17">Горячее дыхание в ухо</string>
-    <string name="prelude_action_18">Горячее дыхание в шею</string>
-    <string name="prelude_action_19">Лизнуть живот</string>
-    <string name="prelude_action_20">Лизнуть ухо</string>
-    <string name="prelude_action_21">Общий язык</string>
-    <string name="prelude_action_22">Страстные объятия</string>
-    <string name="prelude_action_23">Обнять партнера сзади</string>
-    <string name="prelude_action_24">Потереться носами</string>
-    <string name="prelude_action_25">Потереться щеками</string>
-    <string name="prelude_action_26">Показать грудь</string>
-    <string name="prelude_action_27">Снять 1 предмет одежды</string>
-    <string name="prelude_action_28">Снять 1 предмет одежды</string>
-    <string name="prelude_action_29">Массировать грудь партнера</string>
-    <string name="prelude_action_30">Погладить партнера по бедру</string>
-    <string name="prelude_action_31">Укусить палец</string>
 </resources>

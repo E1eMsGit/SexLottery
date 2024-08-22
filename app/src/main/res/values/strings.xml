@@ -1,13 +1,6 @@
 <resources>
     <string name="app_name">Sex Poses Cards</string>
-
-    <string name="style_start_message_text_view">Style</string>
-    <string name="pose_start_message_text_view">Pose</string>
-    <string name="prelude_action_start_message_text_view">Action</string>
-
-    <string name="prelude_button_text">Prelude</string>
-    <string name="game_button_text">Game</string>
-    <string name="start_button_text">Start</string>
+    <string name="pose_start_message_text_view">Push me!</string>
 
     <!--    Styles-->
     <string name="style_1">Affectionately</string>
@@ -16,37 +9,4 @@
     <string name="style_4">Passionately</string>
     <string name="style_5">Fast</string>
     <string name="style_6">Slowly</string>
-
-    <!--    Prelude Actions-->
-    <string name="prelude_action_1">Kiss: Neck</string>
-    <string name="prelude_action_2">Kiss: Eye</string>
-    <string name="prelude_action_3">Kiss: Palm</string>
-    <string name="prelude_action_4">Kiss: Chest</string>
-    <string name="prelude_action_5">Kiss: Back</string>
-    <string name="prelude_action_6">Kiss: Upside down</string>
-    <string name="prelude_action_7">Kiss: Chin</string>
-    <string name="prelude_action_8">Kiss: Nose</string>
-    <string name="prelude_action_9">Bite: Ear</string>
-    <string name="prelude_action_10">Bite: Lip</string>
-    <string name="prelude_action_11">Bite: Tongue</string>
-    <string name="prelude_action_12">Bite: Neck</string>
-    <string name="prelude_action_13">Bite: Knee</string>
-    <string name="prelude_action_14">Bite: Chin</string>
-    <string name="prelude_action_15">Sit on your partners knees</string>
-    <string name="prelude_action_16">Slap on the butt</string>
-    <string name="prelude_action_17">Hot breath in the ear</string>
-    <string name="prelude_action_18">Hot breath in the neck</string>
-    <string name="prelude_action_19">Lick: Belly</string>
-    <string name="prelude_action_20">Lick: Ear</string>
-    <string name="prelude_action_21">Mutual language</string>
-    <string name="prelude_action_22">Passionate hugs</string>
-    <string name="prelude_action_23">Hug your partner from behind</string>
-    <string name="prelude_action_24">Rub your noses</string>
-    <string name="prelude_action_25">Rub your cheeks</string>
-    <string name="prelude_action_26">Show breasts</string>
-    <string name="prelude_action_27">Remove 1 piece of clothing</string>
-    <string name="prelude_action_28">Remove 1 piece of clothing</string>
-    <string name="prelude_action_29">Massage your partners breasts</string>
-    <string name="prelude_action_30">Stroking your partners thigh</string>
-    <string name="prelude_action_31">Bite: Finger</string>
 </resources>
