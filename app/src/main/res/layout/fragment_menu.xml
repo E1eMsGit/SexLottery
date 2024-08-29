@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    tools:context=".MenuFragment">
+    tools:context="ru.apps.e1em.sexlottery.MenuFragment">
 
     <ImageButton
         android:id="@+id/mf_button"

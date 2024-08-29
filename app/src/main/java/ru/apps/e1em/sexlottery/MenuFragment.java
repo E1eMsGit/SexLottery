@@ -1,20 +1,20 @@
-package com.example.sexposescards;
+package ru.apps.e1em.sexlottery;
 
 import android.content.Context;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.sexposescards.interfaces.OnMaleFemaleButtonClickListener;
-import com.example.sexposescards.interfaces.OnFemaleFemaleFButtonClickListener;
-import com.example.sexposescards.interfaces.OnMaleMaleButtonClickListener;
+import ru.apps.e1em.sexlottery.R;
+
+import ru.apps.e1em.sexlottery.interfaces.OnFemaleFemaleFButtonClickListener;
+import ru.apps.e1em.sexlottery.interfaces.OnMaleFemaleButtonClickListener;
+import ru.apps.e1em.sexlottery.interfaces.OnMaleMaleButtonClickListener;
 
 public class MenuFragment extends Fragment {
 

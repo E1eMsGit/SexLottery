@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    tools:context=".CardFragment">
+    tools:context="ru.apps.e1em.sexlottery.CardFragment">
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/pose_easy_flip_view"

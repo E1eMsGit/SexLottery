@@ -1,4 +1,4 @@
-package com.example.sexposescards;
+package ru.apps.e1em.sexlottery;
 
 import android.os.Bundle;
 
@@ -6,9 +6,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.sexposescards.interfaces.OnMaleFemaleButtonClickListener;
-import com.example.sexposescards.interfaces.OnFemaleFemaleFButtonClickListener;
-import com.example.sexposescards.interfaces.OnMaleMaleButtonClickListener;
+import ru.apps.e1em.sexlottery.interfaces.OnFemaleFemaleFButtonClickListener;
+import ru.apps.e1em.sexlottery.interfaces.OnMaleFemaleButtonClickListener;
+import ru.apps.e1em.sexlottery.interfaces.OnMaleMaleButtonClickListener;
 
 public class MainActivity extends AppCompatActivity implements OnFemaleFemaleFButtonClickListener, OnMaleFemaleButtonClickListener, OnMaleMaleButtonClickListener {
 

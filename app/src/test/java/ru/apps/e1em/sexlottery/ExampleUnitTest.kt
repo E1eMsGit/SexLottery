@@ -1,4 +1,4 @@
-package com.example.sexposescards
+package ru.apps.e1em.sexlottery
 
 import org.junit.jupiter.api.Test
 

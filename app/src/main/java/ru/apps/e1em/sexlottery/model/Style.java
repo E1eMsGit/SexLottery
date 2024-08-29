@@ -1,4 +1,4 @@
-package com.example.sexposescards.model;
+package ru.apps.e1em.sexlottery.model;
 
 public class Style {
     private int descriptionId;

@@ -1,8 +1,8 @@
-package com.example.sexposescards.model;
+package ru.apps.e1em.sexlottery.model;
 
 import android.content.Context;
 
-import com.example.sexposescards.R;
+import ru.apps.e1em.sexlottery.R;
 
 import java.util.ArrayList;
 import java.util.List;

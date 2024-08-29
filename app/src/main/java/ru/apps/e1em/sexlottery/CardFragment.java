@@ -1,4 +1,4 @@
-package com.example.sexposescards;
+package ru.apps.e1em.sexlottery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.sexposescards.model.Pose;
-import com.example.sexposescards.model.PosesFFList;
-import com.example.sexposescards.model.PosesMFList;
-import com.example.sexposescards.model.PosesMMList;
-import com.example.sexposescards.model.Style;
-import com.example.sexposescards.model.StylesList;
+import ru.apps.e1em.sexlottery.R;
+
+import ru.apps.e1em.sexlottery.model.Pose;
+import ru.apps.e1em.sexlottery.model.PosesFFList;
+import ru.apps.e1em.sexlottery.model.PosesMFList;
+import ru.apps.e1em.sexlottery.model.PosesMMList;
+import ru.apps.e1em.sexlottery.model.Style;
+import ru.apps.e1em.sexlottery.model.StylesList;
 import com.wajahatkarim3.easyflipview.EasyFlipView;
 
 import java.util.List;
